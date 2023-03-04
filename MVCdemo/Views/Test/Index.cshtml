@@ -1,0 +1,32 @@
+﻿
+
+@model IEnumerable<MVCdemo.Models.ViewModel>
+@{
+    Layout = null;
+}
+
+        <table class="table table-striped table-bordered">
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th>Department Id</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        
+                        <td>@item.employee.Id</td>
+                        <td>@item.employee.Name</td>
+                        <td>@item.employee.Salary</td>
+                        <td>@item.employee.DeptId</td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+
+
